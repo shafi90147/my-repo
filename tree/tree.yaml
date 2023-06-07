@@ -1,0 +1,10 @@
+---
+- name: hello insible
+  hosts: all
+  become: yes
+  tasks:
+    - name: update and installing tree
+      apt:
+        name: tree
+        state: present
+        update_cache: yes
